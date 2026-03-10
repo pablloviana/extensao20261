@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OdontoCad - Relatórios</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        :root {
+            --primary: #7E1C37;
+            --secondary: #0D9488;
+            --text-primary: #1E293B;
+            --text-secondary: #475569;
+            --text-tertiary: #94A3B8;
+            --border-color: #E2E8F0;
+            --bg-main: #F8FAFC;
+            --bg-alt: #F1F5F9;
+            --danger: #E11D48;
+            --success: #10B981;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root">
+        <!-- Sidebar -->
+        <aside class="sidebar cursor-default shadow-lg">
+            <div class="sidebar-header">
+                <div class="sidebar-logo-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M12 22s-2-3-2-5a4 4 0 0 1 2-4 .5.5 0 0 0 .5-.5V7a5 5 0 0 0-10 0v5.5a4 4 0 0 0 1.5 3.08v3.42A2 2 0 0 0 6 21a2 2 0 0 0 2-2v-1.5c0-.83.67-1.5 1.5-1.5h1A1.5 1.5 0 0 1 12 17.5V22z">
+                        </path>
+                        <path
+                            d="M12 22s2-3 2-5a4 4 0 0 0-2-4 .5.5 0 0 1-.5-.5V7a5 5 0 0 1 10 0v5.5a4 4 0 0 1-1.5 3.08v3.42A2 2 0 0 1 18 21a2 2 0 0 1-2-2v-1.5c0-.83-.67-1.5-1.5-1.5h-1a1.5 1.5 0 0 0-1.5 1.5V22z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="sidebar-logo-text">OdontoCad</div>
+            </div>
+
+            <div class="sidebar-menu-label" style="margin-top: 0.5rem;">MENU</div>
+
+            <nav class="sidebar-nav">
+                <a href="index.html" class="sidebar-item" style="text-decoration:none;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="7" height="9" rx="1"></rect>
+                        <rect x="14" y="3" width="7" height="5" rx="1"></rect>
+                        <rect x="14" y="12" width="7" height="9" rx="1"></rect>
+                        <rect x="3" y="16" width="7" height="5" rx="1"></rect>
+                    </svg>
+                    <span>Dashboard</span>
+                </a>
+                <a href="agenda.html" class="sidebar-item" style="text-decoration:none;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    <span>Agenda e Fila</span>
+                    <span class="badge">7</span>
+                </a>
+                <a href="triagem.html" class="sidebar-item" style="text-decoration:none;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                    </svg>
+                    <span>Triagem</span>
+                    <span class="badge">3</span>
+                </a>
+                <a href="pacientes.html" class="sidebar-item" style="text-decoration:none;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    <span>Pacientes</span>
+                </a>
+                <a href="colaboradores.html" class="sidebar-item" style="text-decoration:none;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                        <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                    </svg>
+                    <span>Colaboradores</span>
+                </a>
+                <a href="relatorios.html" class="sidebar-item active" style="text-decoration:none;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="20" x2="18" y2="10"></line>
+                        <line x1="12" y1="20" x2="12" y2="4"></line>
+                        <line x1="6" y1="20" x2="6" y2="14"></line>
+                    </svg>
+                    <span>Relatórios</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="avatar">A</div>
+                <div class="user-info">
+                    <div class="name">Administrador</div>
+                    <div class="role">Coordenador</div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-wrapper">
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="breadcrumb">Relatórios</div>
+
+                <div class="header-actions">
+                    <button class="icon-button" aria-label="Notificações">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                        </svg>
+                        <span class="notification-dot"></span>
+                    </button>
+                    <button class="icon-button" aria-label="Ajuda">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                        </svg>
+                    </button>
+
+                    <div style="width: 1px; height: 24px; background-color: var(--border-color); margin: 0 0.5rem;">
+                    </div>
+
+                    <div class="admin-profile">
+                        <div class="admin-avatar" style="background-color: #7E1C37;">A</div>
+                        <div class="admin-details" style="display: flex; flex-direction: column; margin-right: 0.5rem;">
+                            <span class="name">Pabllo Viana<span class="badge-role">COORDENADOR</span></span>
+                        </div>
+                    </div>
+
+                    <button class="btn-outline">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                            <polyline points="16 17 21 12 16 7"></polyline>
+                            <line x1="21" y1="12" x2="9" y2="12"></line>
+                        </svg> Sair
+                    </button>
+                </div>
+            </header>
+
+            <!-- Dynamic Page Content -->
+            <div class="page-content bg-slate-50">
+                <div class="animate-fade-in delay-100 relatorios-page">
+                    <div class="page-header"
+                        style="margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: flex-start;">
+                        <div>
+                            <h1>Relatórios</h1>
+                            <p>Indicadores analíticos de desempenho clínico</p>
+                        </div>
+                        <div class="header-actions-row">
+                            <select class="btn-outline-sm"
+                                style="padding: 0.4rem 0.8rem; border-radius: 4px; border: 1px solid var(--border-color); outline: none;">
+                                <option selected>Última Semana</option>
+                                <option>Último Mês</option>
+                            </select>
+                            <button class="btn-primary-sm"
+                                style="background: #7E1C37; color: white; border: none; padding: 0.4rem 0.8rem; border-radius: 4px; display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                    <polyline points="10 9 9 9 8 9"></polyline>
+                                </svg> Exportar PDF
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Top KPIs -->
+                    <div class="relatorios-kpi-grid">
+                        <div class="relatorios-kpi-card border-info">
+                            <div class="kpi-content">
+                                <div class="kpi-value-row">
+                                    <h3 class="text-info">108</h3>
+                                    <div class="icon-wrapper-info">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path
+                                                d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3">
+                                            </path>
+                                            <path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"></path>
+                                            <circle cx="20" cy="10" r="2"></circle>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="kpi-label">TOTAL ATENDIMENTOS</div>
+                            </div>
+                        </div>
+
+                        <div class="relatorios-kpi-card border-success">
+                            <div class="kpi-content">
+                                <div class="kpi-value-row">
+                                    <h3 class="text-success">91</h3>
+                                    <div class="icon-wrapper-success">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="kpi-label">EVOLUÇÕES VALIDADAS</div>
+                            </div>
+                        </div>
+
+                        <div class="relatorios-kpi-card border-danger">
+                            <div class="kpi-content">
+                                <div class="kpi-value-row">
+                                    <h3 class="text-danger">84%</h3>
+                                    <div class="icon-wrapper-danger">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="kpi-label">TAXA DE VALIDAÇÃO</div>
+                            </div>
+                        </div>
+
+                        <div class="relatorios-kpi-card border-warning">
+                            <div class="kpi-content">
+                                <div class="kpi-value-row">
+                                    <h3 class="text-warning">23min</h3>
+                                    <div class="icon-wrapper-warning">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <polyline points="12 6 12 12 16 14"></polyline>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="kpi-label">TEMPO MÉDIO ESPERA</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Charts -->
+                    <div class="charts-grid delay-200">
+                        <div class="chart-card flex-2">
+                            <h3 class="chart-title mb-4">Atendimentos por Dia</h3>
+                            <div class="bar-chart-container">
+                                <div class="y-axis">
+                                    <span>28</span>
+                                    <span>21</span>
+                                    <span>14</span>
+                                    <span>7</span>
+                                    <span>0</span>
+                                </div>
+                                <div class="chart-area">
+                                    <div class="grid-line" style="bottom: 25%;"></div>
+                                    <div class="grid-line" style="bottom: 50%;"></div>
+                                    <div class="grid-line" style="bottom: 75%;"></div>
+                                    <div class="grid-line" style="bottom: 100%;"></div>
+
+                                    <div class="bar-group">
+                                        <div class="bar color-primary" style="height: 64%;"></div>
+                                        <div class="bar color-secondary" style="height: 50%;"></div>
+                                        <span class="x-label">Seg</span>
+                                    </div>
+                                    <div class="bar-group">
+                                        <div class="bar color-primary" style="height: 78%;"></div>
+                                        <div class="bar color-secondary" style="height: 67%;"></div>
+                                        <span class="x-label">Ter</span>
+                                    </div>
+                                    <div class="bar-group">
+                                        <div class="bar color-primary" style="height: 53%;"></div>
+                                        <div class="bar color-secondary" style="height: 39%;"></div>
+                                        <span class="x-label">Qua</span>
+                                    </div>
+                                    <div class="bar-group">
+                                        <div class="bar color-primary" style="height: 89%;"></div>
+                                        <div class="bar color-secondary" style="height: 75%;"></div>
+                                        <span class="x-label">Qui</span>
+                                    </div>
+                                    <div class="bar-group">
+                                        <div class="bar color-primary" style="height: 71%;"></div>
+                                        <div class="bar color-secondary" style="height: 60%;"></div>
+                                        <span class="x-label">Sex</span>
+                                    </div>
+                                    <div class="bar-group">
+                                        <div class="bar color-primary" style="height: 21%;"></div>
+                                        <div class="bar color-secondary" style="height: 18%;"></div>
+                                        <span class="x-label">Sáb</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chart-card flex-1">
+                            <h3 class="chart-title mb-4">Por Especialidade</h3>
+                            <div class="donut-chart-container">
+                                <div class="donut-chart">
+                                    <div class="donut-hole"></div>
+                                </div>
+                                <div class="donut-legend-overlay">
+                                    <div class="legend-item" style="top: 10%; right: 5%;">
+                                        <div class="dot" style="background-color: #7E1C37;"></div><span>Dent. 24%</span>
+                                    </div>
+                                    <div class="legend-item" style="top: 40%; right: -8%;">
+                                        <div class="dot" style="background-color: #D97706;"></div><span>Endo. 21%</span>
+                                    </div>
+                                    <div class="legend-item" style="bottom: 10%; right: 10%;">
+                                        <div class="dot" style="background-color: #059669;"></div><span>Prot. 15%</span>
+                                    </div>
+                                    <div class="legend-item" style="bottom: -5%; left: 40%;">
+                                        <div class="dot" style="background-color: #2563EB;"></div><span>Orto. 10%</span>
+                                    </div>
+                                    <div class="legend-item" style="bottom: 10%; left: 10%;">
+                                        <div class="dot" style="background-color: #7C3AED;"></div><span>Cirur.
+                                            12%</span>
+                                    </div>
+                                    <div class="legend-item" style="top: 40%; left: -8%;">
+                                        <div class="dot" style="background-color: #DB2777;"></div><span>Peri. 8%</span>
+                                    </div>
+                                    <div class="legend-item" style="top: 10%; left: 10%;">
+                                        <div class="dot" style="background-color: #0891B2;"></div><span>Pedo. 10%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tables Section -->
+                    <div class="tables-stack delay-300">
+                        <!-- Alunos -->
+                        <div class="card-panel" style="padding: 0; overflow: hidden;">
+                            <div class="card-header border-b"
+                                style="padding-bottom: 1rem; border-bottom: 1px solid var(--border-color);">
+                                <h2 class="card-title" style="display: flex; align-items: center; gap: 8px;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                        <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                                    </svg> Desempenho por Aluno
+                                </h2>
+                            </div>
+                            <div class="data-table-container">
+                                <table class="data-table small-text">
+                                    <thead>
+                                        <tr>
+                                            <th>ALUNO</th>
+                                            <th>MATRÍCULA</th>
+                                            <th>ESPECIALIDADE</th>
+                                            <th style="text-align: center;">ATENDIMENTOS</th>
+                                            <th style="text-align: center;">EVOLUÇÕES</th>
+                                            <th style="text-align: center;">VALIDADAS</th>
+                                            <th style="width: 180px;">TAXA VALIDAÇÃO</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-weight: 500; color: var(--text-primary);">Lucas Mendes</td>
+                                            <td style="color: var(--text-secondary);">2024001</td>
+                                            <td><span class="badge-role-tag"
+                                                    style="background-color: #F1F5F9; color: #475569; font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 4px;">Dentística</span>
+                                            </td>
+                                            <td style="text-align: center; font-weight: 600;">32</td>
+                                            <td style="text-align: center; color: var(--text-secondary);">30</td>
+                                            <td style="text-align: center; color: var(--text-secondary);">28</td>
+                                            <td>
+                                                <div class="progress-bar-container"
+                                                    style="display: flex; align-items: center; gap: 0.5rem;">
+                                                    <span class="progress-text text-success"
+                                                        style="font-weight: 600; font-size: 0.8rem; min-width: 30px;">93%</span>
+                                                    <div class="progress-track"
+                                                        style="flex: 1; height: 6px; background-color: #F1F5F9; border-radius: 4px; overflow: hidden;">
+                                                        <div class="progress-fill bg-success"
+                                                            style="width: 93%; height: 100%; background-color: #059669; border-radius: 4px;">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: 500; color: var(--text-primary);">Mariana Costa</td>
+                                            <td style="color: var(--text-secondary);">2024002</td>
+                                            <td><span class="badge-role-tag"
+                                                    style="background-color: #F1F5F9; color: #475569; font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 4px;">Endodontia</span>
+                                            </td>
+                                            <td style="text-align: center; font-weight: 600;">28</td>
+                                            <td style="text-align: center; color: var(--text-secondary);">26</td>
+                                            <td style="text-align: center; color: var(--text-secondary);">24</td>
+                                            <td>
+                                                <div class="progress-bar-container"
+                                                    style="display: flex; align-items: center; gap: 0.5rem;">
+                                                    <span class="progress-text text-success"
+                                                        style="font-weight: 600; font-size: 0.8rem; min-width: 30px;">92%</span>
+                                                    <div class="progress-track"
+                                                        style="flex: 1; height: 6px; background-color: #F1F5F9; border-radius: 4px; overflow: hidden;">
+                                                        <div class="progress-fill bg-success"
+                                                            style="width: 92%; height: 100%; background-color: #059669; border-radius: 4px;">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: 500; color: var(--text-primary);">Julia Tavares</td>
+                                            <td style="color: var(--text-secondary);">2024004</td>
+                                            <td><span class="badge-role-tag"
+                                                    style="background-color: #F1F5F9; color: #475569; font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 4px;">Periodontia</span>
+                                            </td>
+                                            <td style="text-align: center; font-weight: 600;">25</td>
+                                            <td style="text-align: center; color: var(--text-secondary);">24</td>
+                                            <td style="text-align: center; color: var(--text-secondary);">20</td>
+                                            <td>
+                                                <div class="progress-bar-container"
+                                                    style="display: flex; align-items: center; gap: 0.5rem;">
+                                                    <span class="progress-text text-warning"
+                                                        style="font-weight: 600; font-size: 0.8rem; min-width: 30px;">83%</span>
+                                                    <div class="progress-track"
+                                                        style="flex: 1; height: 6px; background-color: #F1F5F9; border-radius: 4px; overflow: hidden;">
+                                                        <div class="progress-fill bg-warning"
+                                                            style="width: 83%; height: 100%; background-color: #D97706; border-radius: 4px;">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Docentes -->
+                        <div class="card-panel" style="padding: 0; overflow: hidden; margin-top: 1.5rem;">
+                            <div class="card-header border-b"
+                                style="padding-bottom: 1rem; border-bottom: 1px solid var(--border-color);">
+                                <h2 class="card-title" style="display: flex; align-items: center; gap: 8px;">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                        <polyline points="14 2 14 8 20 8"></polyline>
+                                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                                        <polyline points="10 9 9 9 8 9"></polyline>
+                                    </svg> Validações por Docente
+                                </h2>
+                            </div>
+                            <div class="data-table-container">
+                                <table class="data-table small-text">
+                                    <thead>
+                                        <tr>
+                                            <th>DOCENTE</th>
+                                            <th>CRO</th>
+                                            <th style="text-align: center;">VALIDAÇÕES</th>
+                                            <th style="text-align: center;">PENDENTES</th>
+                                            <th style="text-align: center;">TEMPO MÉDIO</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-weight: 500; color: var(--text-primary);">Prof. Dr. Ricardo
+                                                Silva</td>
+                                            <td style="color: var(--text-secondary);">SP-45321</td>
+                                            <td
+                                                style="text-align: center; font-weight: 600; color: var(--success-color);">
+                                                48</td>
+                                            <td style="text-align: center;"><span class="status-xs warning">3
+                                                    pendentes</span></td>
+                                            <td style="text-align: center; font-weight: 500;">12min</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: 500; color: var(--text-primary);">Prof. Dra. Ana
+                                                Ferreira</td>
+                                            <td style="color: var(--text-secondary);">SP-98210</td>
+                                            <td
+                                                style="text-align: center; font-weight: 600; color: var(--success-color);">
+                                                35</td>
+                                            <td style="text-align: center;"><span class="status-xs warning">5
+                                                    pendentes</span></td>
+                                            <td style="text-align: center; font-weight: 500;">18min</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: 500; color: var(--text-primary);">Prof. Dr. Fernando
+                                                Alves</td>
+                                            <td style="color: var(--text-secondary);">SP-41350</td>
+                                            <td
+                                                style="text-align: center; font-weight: 600; color: var(--success-color);">
+                                                22</td>
+                                            <td style="text-align: center;"><span class="status-xs warning">2
+                                                    pendentes</span></td>
+                                            <td style="text-align: center; font-weight: 500;">10min</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bottom KPIs -->
+                    <div class="card-panel" style="margin-top: 1.5rem;">
+                        <div class="card-header border-b"
+                            style="padding-bottom: 1rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color);">
+                            <h2 class="card-title" style="display: flex; align-items: center; gap: 8px;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg> Indicadores de Triagem
+                            </h2>
+                        </div>
+                        <div class="triagem-bottom-kpis"
+                            style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; padding-bottom: 0.5rem;">
+                            <div class="bottom-kpi-card"
+                                style="background: #F8FAFC; border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <div class="b-icon" style="color: #64748B; margin-bottom: 0.75rem;"><svg width="20"
+                                        height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg></div>
+                                <div class="b-val"
+                                    style="font-size: 1.5rem; font-weight: 700; color: var(--text-primary);">174</div>
+                                <div class="b-lbl"
+                                    style="font-size: 0.75rem; font-weight: 600; color: #64748B; margin-top: 0.25rem;">
+                                    TOTAL DE TRIAGENS</div>
+                            </div>
+                            <div class="bottom-kpi-card"
+                                style="background: #F8FAFC; border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <div class="b-icon" style="color: #64748B; margin-bottom: 0.75rem;"><svg width="20"
+                                        height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                                    </svg></div>
+                                <div class="b-val"
+                                    style="font-size: 1.5rem; font-weight: 700; color: var(--text-primary);">162</div>
+                                <div class="b-lbl"
+                                    style="font-size: 0.75rem; font-weight: 600; color: #64748B; margin-top: 0.25rem;">
+                                    ENCAMINHAMENTOS</div>
+                            </div>
+                            <div class="bottom-kpi-card"
+                                style="background: #F8FAFC; border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <div class="b-icon" style="color: #64748B; margin-bottom: 0.75rem;"><svg width="12"
+                                        height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z">
+                                        </path>
+                                        <line x1="12" y1="9" x2="12" y2="13"></line>
+                                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                    </svg></div>
+                                <div class="b-val"
+                                    style="font-size: 1.5rem; font-weight: 700; color: var(--text-primary);">12</div>
+                                <div class="b-lbl"
+                                    style="font-size: 0.75rem; font-weight: 600; color: #64748B; margin-top: 0.25rem;">
+                                    DESISTÊNCIAS</div>
+                            </div>
+                            <div class="bottom-kpi-card"
+                                style="background: #F8FAFC; border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <div class="b-icon" style="color: #64748B; margin-bottom: 0.75rem;"><svg width="20"
+                                        height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg></div>
+                                <div class="b-val"
+                                    style="font-size: 1.5rem; font-weight: 700; color: var(--text-primary);">23min</div>
+                                <div class="b-lbl"
+                                    style="font-size: 0.75rem; font-weight: 600; color: #64748B; margin-top: 0.25rem;">
+                                    TEMPO MÉDIO ESPERA</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

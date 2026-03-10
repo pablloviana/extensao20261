@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OdontoCad - Pacientes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="root">
+        <!-- Sidebar -->
+        <aside class="sidebar cursor-default shadow-lg">
+            <div class="sidebar-header">
+                <div class="sidebar-logo-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M12 22s-2-3-2-5a4 4 0 0 1 2-4 .5.5 0 0 0 .5-.5V7a5 5 0 0 0-10 0v5.5a4 4 0 0 0 1.5 3.08v3.42A2 2 0 0 0 6 21a2 2 0 0 0 2-2v-1.5c0-.83.67-1.5 1.5-1.5h1A1.5 1.5 0 0 1 12 17.5V22z">
+                        </path>
+                        <path
+                            d="M12 22s2-3 2-5a4 4 0 0 0-2-4 .5.5 0 0 1-.5-.5V7a5 5 0 0 1 10 0v5.5a4 4 0 0 1-1.5 3.08v3.42A2 2 0 0 1 18 21a2 2 0 0 1-2-2v-1.5c0-.83-.67-1.5-1.5-1.5h-1a1.5 1.5 0 0 0-1.5 1.5V22z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="sidebar-logo-text">OdontoCad</div>
+            </div>
+
+            <div class="sidebar-menu-label" style="margin-top: 0.5rem;">MENU</div>
+
+            <nav class="sidebar-nav">
+                <a href="index.html" class="sidebar-item" style="text-decoration:none;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="7" height="9" rx="1"></rect>
+                        <rect x="14" y="3" width="7" height="5" rx="1"></rect>
+                        <rect x="14" y="12" width="7" height="9" rx="1"></rect>
+                        <rect x="3" y="16" width="7" height="5" rx="1"></rect>
+                    </svg>
+                    <span>Dashboard</span>
+                </a>
+                <a href="agenda.html" class="sidebar-item" style="text-decoration:none;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    <span>Agenda e Fila</span>
+                    <span class="badge">7</span>
+                </a>
+                <a href="triagem.html" class="sidebar-item" style="text-decoration:none;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                    </svg>
+                    <span>Triagem</span>
+                    <span class="badge">3</span>
+                </a>
+                <a href="pacientes.html" class="sidebar-item active" style="text-decoration:none;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    <span>Pacientes</span>
+                </a>
+                <a href="colaboradores.html" class="sidebar-item" style="text-decoration:none;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                        <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                    </svg>
+                    <span>Colaboradores</span>
+                </a>
+                <a href="relatorios.html" class="sidebar-item" style="text-decoration:none;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="20" x2="18" y2="10"></line>
+                        <line x1="12" y1="20" x2="12" y2="4"></line>
+                        <line x1="6" y1="20" x2="6" y2="14"></line>
+                    </svg>
+                    <span>Relatórios</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="avatar">A</div>
+                <div class="user-info">
+                    <div class="name">Administrador</div>
+                    <div class="role">Coordenador</div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-wrapper">
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="breadcrumb">Pacientes</div>
+                <div class="header-actions">
+                    <button class="icon-button" aria-label="Notificações">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                        </svg>
+                        <span class="notification-dot"></span>
+                    </button>
+                    <button class="icon-button" aria-label="Ajuda">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                        </svg>
+                    </button>
+                    <div style="width: 1px; height: 24px; background-color: var(--border-color); margin: 0 0.5rem;">
+                    </div>
+                    <div class="admin-profile">
+                        <div class="admin-avatar" style="background-color: #7E1C37;">A</div>
+                        <div class="admin-details" style="display: flex; flex-direction: column; margin-right: 0.5rem;">
+                            <span class="name">Pabllo Viana<span class="badge-role">COORDENADOR</span></span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dynamic Page Content -->
+            <div class="page-content bg-slate-50">
+                <div class="animate-fade-in delay-100">
+                    <div class="page-header"
+                        style="margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <h1>Pacientes</h1>
+                            <p>5 pacientes cadastrados</p>
+                        </div>
+                        <button class="btn-primary-sm" style="padding: 0.6rem 1.25rem;">+ Novo Paciente</button>
+                    </div>
+
+                    <div class="card-panel" style="padding: 0; overflow: hidden;">
+                        <div class="filter-bar-row mb-4"
+                            style="padding: 1rem; border-bottom: 1px solid var(--border-color); margin-bottom: 0;">
+                            <div class="search-input-wrapper flex-1" style="max-width: 400px; background: #FAFBFC;">
+                                <div class="search-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <circle cx="11" cy="11" r="8"></circle>
+                                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                    </svg></div>
+                                <input type="text" class="search-input"
+                                    placeholder="Buscar por nome, CPF ou prontuário..."
+                                    style="background: transparent;" />
+                            </div>
+                        </div>
+
+                        <div class="data-table-container">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Paciente</th>
+                                        <th>CPF</th>
+                                        <th>Idade</th>
+                                        <th>Prontuário</th>
+                                        <th>Convênio</th>
+                                        <th>Status</th>
+                                        <th>Última Visita</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="patient-cell">
+                                                <div class="patient-avatar"
+                                                    style="background-color: #FCE7F3; color: #9D174D;">M</div>
+                                                <span style="font-weight: 600; color: var(--text-primary);">Maria
+                                                    Aparecida dos Santos</span>
+                                                <span class="badge-alert-pill">Alerta</span>
+                                            </div>
+                                        </td>
+                                        <td style="color: var(--text-secondary);">123.456.789-00</td>
+                                        <td style="color: var(--text-secondary);">36 anos</td>
+                                        <td style="color: var(--text-secondary);">400142</td>
+                                        <td style="color: var(--text-secondary);">Odonto Prev</td>
+                                        <td><span class="status-pill success">ATIVO</span></td>
+                                        <td style="color: var(--text-secondary);">05/08/2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="patient-cell">
+                                                <div class="patient-avatar"
+                                                    style="background-color: #FEE2E2; color: #991B1B;">J</div>
+                                                <span style="font-weight: 600; color: var(--text-primary);">João da
+                                                    Silva</span>
+                                                <span class="badge-alert-pill">Alerta</span>
+                                            </div>
+                                        </td>
+                                        <td style="color: var(--text-secondary);">987.654.321-00</td>
+                                        <td style="color: var(--text-secondary);">45 anos</td>
+                                        <td style="color: var(--text-secondary);">400059</td>
+                                        <td style="color: var(--text-secondary);">Sul América</td>
+                                        <td><span class="status-pill success">ATIVO</span></td>
+                                        <td style="color: var(--text-secondary);">14/08/2024</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="patient-cell">
+                                                <div class="patient-avatar"
+                                                    style="background-color: #F3E8FF; color: #6B21A8;">C</div>
+                                                <span style="font-weight: 600; color: var(--text-primary);">Carlos
+                                                    Oliveira</span>
+                                            </div>
+                                        </td>
+                                        <td style="color: var(--text-secondary);">456.789.123-00</td>
+                                        <td style="color: var(--text-secondary);">29 anos</td>
+                                        <td style="color: var(--text-secondary);">400201</td>
+                                        <td style="color: var(--text-secondary);">Particular</td>
+                                        <td><span class="status-pill success">ATIVO</span></td>
+                                        <td style="color: var(--text-secondary);">02/08/2023</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
